@@ -1,0 +1,72 @@
+{
+  "name": "event-management-fe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "React client for the event_management_app_BE Rails API",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-datepicker": "^4.25.0",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.27.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^14.3.1",
+    "@testing-library/user-event": "^14.5.2",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:ci": "CI=true react-scripts test --watchAll=false",
+    "lint": "eslint src --max-warnings 0",
+    "format": "prettier --write \"src/**/*.{js,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,css}\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "prettier"
+    ],
+    "rules": {
+      "no-console": [
+        "warn",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "eqeqeq": "error",
+      "no-var": "error",
+      "prefer-const": "error"
+    }
+  },
+  "jest": {
+    "resetMocks": false
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
