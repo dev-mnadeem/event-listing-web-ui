@@ -1,0 +1,20 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        # Where the browser — not the container — reaches the API. Inlined at
+        # build time, so changing it needs `docker compose build`, not a restart.
+        REACT_APP_API_BASE_URL: ${REACT_APP_API_BASE_URL:-}
+        REACT_APP_PAGE_SIZE: ${REACT_APP_PAGE_SIZE:-8}
+    image: event-listing-web-ui:latest
+    ports:
+      - "${WEB_PORT:-8080}:8080"
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /var/cache/nginx
+      - /var/run
+    security_opt:
+      - no-new-privileges:true

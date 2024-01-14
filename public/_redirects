@@ -1,0 +1,7 @@
+# Netlify: every path is served by the SPA, because React Router owns routing
+# client-side and /events/7 is not a file on disk.
+#
+# There is deliberately no API proxy rule here. The client reaches the API
+# through REACT_APP_API_BASE_URL, which is set per deployment, rather than
+# through a backend host baked into the build.
+/*  /index.html  200
