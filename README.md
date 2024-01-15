@@ -256,3 +256,7 @@ on the machine this was last worked on, so treat the Dockerfile as reviewed, not
 - No end-to-end test runs against the real API. The contract is asserted against a mocked
   HTTP client, which catches a wrong path or a missing header but not a server that changed
   shape underneath it.
+
+## Author
+
+[**Muhammad Nadeem**](https://github.com/dev-mnadeem)
